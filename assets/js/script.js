@@ -11,7 +11,12 @@ const randomInt = (min,max) =>{
 
 
 btnSplit.addEventListener('click',function(){
+
+    thread.classList.add('scroll')
+
     const noOfCharacters = inputText.value.length
+
+    if(noOfCharacters === 0) return
 
     const contentStr = inputText.value
 
@@ -19,12 +24,25 @@ btnSplit.addEventListener('click',function(){
     console.log(noOfTweets);
 
 
-    const html = `
-     <div class="content bg-${randomInt(1,10)}">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores iure repellendus est optio temporibus maxime, suscipit cupiditate recusandae doloribus sequi aut omnis quas, animi dolores tempore sapiente quis! Quae magni tempora magnam corrupti cumque ea expedita, totam voluptatibus, aa
-        </p>
-    </div>
-    `
+    let lastSplit = 0
 
-    thread.insertAdjacentHTML('beforeend',html)
+   
+    while(lastSplit < noOfCharacters)
+    {   
+        let limit = noOfCharacters - lastSplit > 288 ? 288 : noOfCharacters-lastSplit
+        const dividedStr = contentStr.slice(lastSplit,lastSplit + limit)
+
+
+        lastSplit += limit
+        const html = `
+        <div class="content bg-${randomInt(1,5)}">
+           <p>${dividedStr}</p>
+           <p><small>${dividedStr.length}/288</small><p>
+       </div>
+       `
+   
+       thread.insertAdjacentHTML('beforeend',html)
+    }
+
+   
 })
