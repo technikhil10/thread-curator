@@ -59,15 +59,54 @@ body {
 
 .content {
 	margin: 1rem 1.5rem;
-	width: 50%;
+	width: 75%;
 	height: auto;
-	border-radius: 15px;
+	border-radius: 25px;
 	padding: 1rem 1.5rem;
-	box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.7),
+	box-shadow: 5px 5px 5px #00000070, -5px -5px 5px #fff;
+
+	/* -8px -8px 15px rgba(255, 255, 255, 0.7),
 		10px 10px 10px rgba(0, 0, 0, 0.3),
 		inset 8px 8px 15px rgba(255, 255, 255, 0.7),
-		inset 10px 10px 10px rgba(0, 0, 0, 0.3);
+		inset 10px 10px 10px rgba(0, 0, 0, 0.3); */
 }
+
+/* Utility Classes */
+
+.bg-1 {
+	background-color: rgb(98, 76, 223);
+}
+
+.bg-2 {
+	background-color: beige;
+}
+
+.bg-3 {
+	background-color: pink;
+}
+.bg-4 {
+	background-color: azure;
+}
+.bg-5 {
+	background-color: bisque;
+}
+.bg-6 {
+	background-color: chocolate;
+}
+.bg-7 {
+	background-color: darksalmon;
+}
+.bg-8 {
+	background-color: lawngreen;
+}
+.bg-9 {
+	background-color: navajowhite;
+}
+.bg-10 {
+	background-color: teal;
+}
+
+/* Switch Toggler */
 
 .switch-holder {
 	display: flex;
